@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="path-to-favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <!--Navbar - Starts-->
+    <nav class="container-fluid border-bottom border-success">
+        <div id="title" class="text-center mt-5">
+            <h1>Etch-a-Sketch</h1>
+        </div>
+    </nav>
+    <!--Navbar - Ends-->
+    <!--Main - Starts-->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-2"></div><!--Empty Column-->
+            <!--Side Bar-->
+            <div class="col-3 row">
+              <!--Color Picker-->
+              <div  class="container">
+                <input id="colorPicker" type="color" value="#333333" oninput="setCurrentColor(this.value)" />
+              </div>
+              <!--Color Mode Button-->
+              <div class="container">
+                <button id="colorBtn" class="btn btn-light btn-outline-success btn-lg" onclick="setCurrentMode('color')" >Color mode</button>
+              </div>
+              <!--Rainbow mode-->
+              <div class="container">
+                <button id="rainbowBtn" class="btn btn-light btn-outline-success btn-lg" onclick="setCurrentMode('rainbow')" >Rainbow mode</button>
+              </div>
+              <!--Eraser-->
+              <div class="container">
+                <button id="eraserBtn" class="btn btn-light btn-outline-success btn-lg" onclick="setCurrentMode('eraser')" >Eraser</button>
+              </div>
+              <!--Clear-->
+              <div class="container">
+                <button id="clearBtn" class="btn btn-light btn-outline-success btn-lg">Clear</button>
+              </div>
+              <!--Sketch Area-Grid Size-->
+              <div class="container">
+                <div id="sizeSliderText" class="size-value text-success fs-4">16 x 16</div>
+              </div>
+              <div class="container">
+                <input id="sizeSlider" type="range" value="16" min="1" max="64" />
+              </div>
+            </div>
+            <!--Sketch Part-->
+            <div id="sketch" class="col-6">
+              <div id="grid" class="grid" ></div>
+            </div>
+            <div class="col-1"></div><!--Empty Column-->
+        </div>
+    </div>
+    <!--Main - Ends-->
+    <!--Footer - Starts-->
+    <footer class="footer text-center">
+        <p>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          InciGulcinDY
+        </p>
+        <a href="https://github.com/InciGulcinDY" target="_blank">
+          <i class="fab fa-github"></i
+        ></a>
+      </footer>
+    <!--Footer - Ends-->
+    <script src="script.js"></script>
+</body>
+</html>
